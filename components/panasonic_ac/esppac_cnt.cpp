@@ -359,7 +359,7 @@ std::string PanasonicACCNT::determine_fan_speed(uint8_t speed) {
     case 0x70:  // 5
       return "5";
     default:
-      ESP_LOGW(TAG, "Received unknown fan speed");
+      ESP_LOGW(TAG, "Hey, Received unknown fan speed");
       return "Unknown";
   }
 }
