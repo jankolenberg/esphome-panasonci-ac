@@ -330,7 +330,8 @@ climate::ClimateMode PanasonicACCNT::determine_mode(uint8_t mode) {
   switch (nib1) {
     case 0x00:  // Auto
       return climate::CLIMATE_MODE_HEAT_COOL;
-    case 0x03:  // Cool
+    // case 0x03:  // Cool
+    case 0x34:  // Cool
       return climate::CLIMATE_MODE_COOL;
     case 0x04:  // Heat
       return climate::CLIMATE_MODE_HEAT;
