@@ -324,14 +324,13 @@ climate::ClimateMode PanasonicACCNT::determine_mode(uint8_t mode) {
   uint8_t nib1 = (mode >> 4) & 0x0F;  // Left nib for mode
   uint8_t nib2 = (mode >> 0) & 0x0F;  // Right nib for power state
 
-  if (nib2 == 0x00)
-    return climate::CLIMATE_MODE_OFF;
+  //if (nib2 == 0x00)
+  //  return climate::CLIMATE_MODE_OFF;
 
   switch (nib1) {
     case 0x00:  // Auto
       return climate::CLIMATE_MODE_HEAT_COOL;
-    // case 0x03:  // Cool
-    case 0x34:  // Cool
+    case 0x03:  // Cool
       return climate::CLIMATE_MODE_COOL;
     case 0x04:  // Heat
       return climate::CLIMATE_MODE_HEAT;
